@@ -43,10 +43,10 @@
 	<div class="container">
 
 		<div class="col-sm-3 col-md-3 col-lg-3">
-			<h3 class="text-center">Profile</h3>
+			<h3 class="text-center">Your Profile</h3>
 			<img id="profilePic" class="center-block" src="img/logo.jpg">
 			<br>
-			<a href="#" class="text-center">Edit Profile</a>	
+			<a href="#" id="editProfile" class="text-center">Edit Profile</a>	
 		</div> 
 
 		<div class="col-sm-9 col-md-9 col-lg-9">
@@ -56,27 +56,30 @@
 				<div class="col-sm-6 col-md-6 col-lg-6">
 
 					<label>First Name</label>
-					<input class="form-control" type="text">
+					<input id="firstName" class="profileText form-control" disabled="true" type="text">
 				
 				</div>
 
 				<div class="col-sm-6 col-md-6 col-lg-6">
 
 					<label>Last Name</label>
-					<input class="form-control" type="text">
+					<input class="profileText form-control" disabled="true" type="text">
 
 				</div>
 
 			</div>
 
 			<label>Email</label>
-			<input class="form-control" type="Email">
+			<input class="profileText form-control" disabled="true" type="Email">
 
 			<label>Bio</label>
-			<textarea class="form-control" rows="5" type="text"></textarea>
+			<textarea class="profileText form-control" disabled="true" rows="5" type="text"></textarea>
 
 			<label>Location</label>
-			<input class="form-control" type="text"><br>			
+			<input class="profileText form-control" disabled="true" type="text"><br>
+
+			<button type="button" id="profileButton" class="btn-primary btn center-block">Update Profile</button>
+			<br>			
 
 
 		</div> 
@@ -300,7 +303,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/profile.js"></script>
 <script>
 /* Modernizr 2.5.3 (Custom Build) | MIT & BSD
  * Build: http://www.modernizr.com/download/#-csstransforms3d-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load
