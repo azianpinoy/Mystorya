@@ -1,0 +1,12 @@
+#storyBackground{
+	min-height: 500px;
+	background-color: lightblue; 
+	border: solid black 1px;
+}
+
+#leftPage, #rightPage{
+	background-color: white;
+	min-height: 490px;
+	margin-top: 5px;
+	border: solid black 1px;
+}
