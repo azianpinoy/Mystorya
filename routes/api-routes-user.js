@@ -2,7 +2,9 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/user", function(req, res) {
-    db.User.findAll({}).then(function(result) {
+    db.User.findAll({
+      include: [db.Story]
+    }).then(function(result) {
       res.json(result);
     });
   });
@@ -11,7 +13,8 @@ module.exports = function(app) {
     db.User.findOne({
       where: {
         id: req.params.id
-      }
+      },
+      include: [db.Story]
     }).then(function(result) {
       res.json(result);
     });
