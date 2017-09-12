@@ -91,3 +91,356 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+.navigation
+{
+  
+  text-align: center;
+  font-style: "didot";
+  margin: auto;
+  display: block;
+}
+
+
+.header-space{
+
+  height: 100px;
+  background-image: url("../../assets/images/mystoryaJumbo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*border-radius: 20px;*/
+  border-color: white;
+  border-style:solid;
+
+}
+
+
+.user-buttons{
+  margin-top: 20px;
+}
+
+*---------------------signup css-----------------------*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #1E1C1C;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {float:left;width:50%}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+/*-----------------------------------Login CSS-----------------------------*/
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #1E1C1C;
+
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: #939393;
+    cursor: pointer;
+    width: 100%;
+  
+    border-color: white;
+    border-style:solid;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.login {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+.jumbotron{
+  height: 640px;
+  background-image: url("../img/mystoryaJumbo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.jumbotron h1{
+  margin-top: 200px;
+  background: rgba(142, 204, 214, 0.5);
+}
+
+#searchButton{
+  width: 10%;
+  background: rgb(30, 28, 28);
+}
+
+#searchButton:hover{
+  background: #61c0df;
+  border: 1px solid black;
+}
+
+#searchBoxDiv{
+  background-color: #f4f2f2;
+  border-top: solid 1px lightgrey; 
+  border-bottom: solid 1px lightgrey;
+}
+
+/* This section holds the grey contents styling */
+.contents{
+  margin-bottom: 75px;
+  height:800px;
+  background-image: url("../img/greyBackground.jpg");
+  background-size: contain;
+  margin: auto;
+
+}
+
+.enjoy-pic{
+  height:400px;
+  width:250px;
+  margin-top: 60px;
+  background-image: url("../img/enjoy.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.enjoy-text {
+  text-align: center;
+
+}
+
+.book-pic{
+  height:400px;
+  width:250px;
+  background-image: url("../img/book.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+
+.repeat-pic{
+  height:400px;
+  width:250px;
+  margin-top: 60px;
+  background-image: url("../img/repeat.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* This section holds the styling for vimeo video player  */
+#vimeo{
+  padding: 0px;
+}
+
+/*----------------------------------Footer CSS--------------------------------------*/
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #f5f5f5;
+  vertical-align: middle;
+  
+}
+
+.footer-logo{
+  padding-top: 10px;
+  vertical-align: middle;
+  height:80px;
+  margin-top: 20px;
+}
+
+.company-info-title{
+  text-decoration: underline;
+
+}
+
+.container .company-info{
+  font-size: 13px;
+  font-family: "didot";
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.container .text-muted{
+padding-top: 10px;
+  margin: 20px 0;
+  vertical-align: middle;
+}
+
+.container .social-icons{
+  margin: 30px 0;
+}
