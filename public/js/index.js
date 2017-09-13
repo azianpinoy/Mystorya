@@ -16,10 +16,20 @@ function postUserData(){
   }
   
   console.log("Test");
-  
 
- /* function upsertAuthor(authorData) {
-    $.post("/api/authors", authorData)
-      .then(getAuthors);
-  }*/
+  var userData = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    password: password;
+  }
+  
+  $.post("/api/user", userData)
+      .then(
+        console.log("User data added");
+     /*   $.get("/api/user", function(data) {
+          console.log(data)*/
+        }
+      );
+  }
 }
