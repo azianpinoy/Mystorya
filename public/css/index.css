@@ -103,15 +103,8 @@
 
 
 .header-space{
-
+  
   height: 100px;
-  background-image: url("../../assets/images/mystoryaJumbo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  /*border-radius: 20px;*/
-  border-color: white;
-  border-style:solid;
-
 }
 
 
