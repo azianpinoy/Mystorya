@@ -26,7 +26,7 @@ module.exports = function(app) {
     });
   });
 
-  app.delete("/api/authors/:id", function(req, res) {
+  app.delete("/api/user/:id", function(req, res) {
     db.User.destroy({
       where: {
         id: req.params.id
