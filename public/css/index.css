@@ -1,0 +1,484 @@
+/* Fallback styles */
+.book {
+  display: inline-block;
+  box-shadow: 5px 5px 20px #333;
+  margin: 10px;
+}
+
+.book img { vertical-align: middle; }
+
+/*
+ *  In order for this to work, you must use Modernizer
+ *  to detect 3D transform browser support. This will add
+ *  a "csstransforms3d" class to the HTML element.
+ *
+ *  Visit http://modernizr.com/ for installation instructions
+ */
+
+.csstransforms3d  .books {
+  -moz-perspective: 100px;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.csstransforms3d  .book {
+  position: relative;
+  -moz-perspective: 100px;
+  -moz-transform: rotateY(-3deg);
+  -webkit-transform: perspective(100) rotateY(-3deg);
+  outline: 1px solid transparent; /* Helps smooth jagged edges in Firefox */
+  box-shadow: none;
+  margin: 0;
+}
+
+.csstransforms3d  .book img {
+  position: relative;
+  max-width: 100%;
+}
+
+.csstransforms3d  .book:before,
+.csstransforms3d  .book:after {
+  position: absolute;
+  top: 2%;
+  height: 96%;
+  content: ' ';
+  z-index: -1;
+}
+
+.csstransforms3d  .book:before {
+  width: 100%;
+  left: 7.5%;
+  background-color: #5a2d18;
+  box-shadow: 5px 5px 20px #333;
+}
+
+.csstransforms3d  .book:after {
+  width: 5%;
+  left: 100%;
+  background-color: #EFEFEF;
+  box-shadow: inset 0px 0px 5px #aaa;
+  -moz-transform: rotateY(20deg);
+  -webkit-transform: perspective(100) rotateY(20deg);
+}
+
+.bookImage{
+  height: 200px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.book:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.navigation
+{
+  
+  text-align: center;
+  font-style: "didot";
+  margin: auto;
+  display: block;
+}
+
+
+.header-space{
+  height: 50px;
+}
+
+
+.user-buttons{
+  margin-top: 20px;
+}
+
+*---------------------signup css-----------------------*/
+
+/* Set a style for all buttons */
+button {
+    background-color: #1E1C1C;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+  float:left;
+  width:50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.clearfix{
+  width: 20%;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+/*-----------------------------------Login CSS-----------------------------*/
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #1E1C1C;
+
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: #939393;
+    cursor: pointer;
+    width: 100%;
+  
+    border-color: white;
+    border-style:solid;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.login {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+.jumbotron{
+  height: 640px;
+  background-image: url("../img/mystoryaJumbo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 0px;
+}
+
+
+
+.jumbotron h1{
+  margin-top: 200px;
+  background: rgba(142, 204, 214, 0.5);
+  color: white;
+  text-shadow:
+    -1px -1px 0 grey,
+    1px -1px 0 grey,
+    -1px 1px 0 grey,
+    1px 1px 0 grey;
+  border-top: solid 1px #d4d4d4; 
+  border-bottom: solid 1px #d4d4d4;
+}
+
+#searchButton{
+  width: 10%;
+  background: rgb(30, 28, 28);
+}
+
+#searchButton:hover{
+  background: #61c0df;
+  border: 1px solid black;
+}
+
+#searchBoxDiv{
+  background-color: #f4f2f2;
+  border-top: solid 1px lightgrey; 
+  border-bottom: solid 1px lightgrey;
+}
+
+/* This section holds the grey contents styling */
+.contents{
+  margin-bottom: 75px;
+  height:800px;
+  background-image: url("../img/greyBackground.jpg");
+  background-size: contain;
+  margin: auto;
+
+}
+
+.enjoy-pic{
+  height:400px;
+  width:250px;
+  margin-top: 60px;
+  background-image: url("../img/enjoy.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.enjoy-text {
+  text-align: center;
+
+}
+
+.book-pic{
+  height:400px;
+  width:250px;
+  background-image: url("../img/book.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+
+.repeat-pic{
+  height:400px;
+  width:250px;
+  margin-top: 60px;
+  background-image: url("../img/repeat.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* This section holds the styling for vimeo video player  */
+#vimeo{
+  padding: 0px;
+}
+
+/*----------------------------------Footer CSS--------------------------------------*/
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #f5f5f5;
+  vertical-align: middle;
+  
+}
+
+.footer-logo{
+  padding-top: 10px;
+  vertical-align: middle;
+  height:80px;
+  margin-top: 20px;
+}
+
+.company-info-title{
+  text-decoration: underline;
+
+}
+
+.container .company-info{
+  font-size: 13px;
+  font-family: "didot";
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.container .text-muted{
+padding-top: 10px;
+  margin: 20px 0;
+  vertical-align: middle;
+}
+
+.container .social-icons{
+  margin: 30px 0;
+}
+
+.shelfTitle{
+  background-color: lightblue;
+  width: 10%;
+  border: solid lightgrey 1px;
+  margin-top: 0px;
+}
+
+#modalContainer{
+  width: 100%;
+}
+
+#searchBar{
+  width: 100%;
+}
+
+.shelf {
+    background-image: url("../img/glassyshelf.png");
+    background-repeat: no-repeat;
+    background-position: bottom;   
+}
+
+#nameDiv{
+  width: 46%;
+  float: left;
+  margin-left: 3%;
+}
+
+
+#shelfBackground{
+  background-color: #f6fdff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#headerContainer{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
