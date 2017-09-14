@@ -20,7 +20,7 @@ $( document ).ready(function() {
 });
 
 function getProfileData(id){
-	$.get("/api/user/" + id, function(data) {
+	$.get("/api/user/id/" + id, function(data) {
       console.log(data);
       
       var firstName = data.firstName;
@@ -41,7 +41,7 @@ function getProfileData(id){
 }
 
 function getUserStories(id){
-	$.get("/api/user/" + id, function(data) {
+	$.get("/api/user/id/" + id, function(data) {
       console.log(data);
 
       var storyCount = data.Stories.length;

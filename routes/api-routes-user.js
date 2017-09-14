@@ -9,10 +9,21 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/user/:id", function(req, res) {
+  app.get("/api/user/id/:id", function(req, res) {
     db.User.findOne({
       where: {
         id: req.params.id
+      },
+      include: [db.Story]
+    }).then(function(result) {
+      res.json(result);
+    });
+  });
+
+  app.get("/api/user/username/:username", function(req, res) {
+    db.User.findOne({
+      where: {
+        userName: req.params.username,
       },
       include: [db.Story]
     }).then(function(result) {

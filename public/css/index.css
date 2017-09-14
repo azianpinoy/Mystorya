@@ -103,7 +103,7 @@
 
 
 .header-space{
-  height: 100px;
+  height: 50px;
 }
 
 
@@ -468,4 +468,9 @@ padding-top: 10px;
   background-color: #f6fdff;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+#headerContainer{
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
