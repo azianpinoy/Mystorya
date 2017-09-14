@@ -91,3 +91,25 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+#headerContainer{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#searchBox{
+  width: 50%;
+  padding-top: 20px;
+}
+
+.form-control-feedback{
+  margin-top: 20px;
+}
+
+#editProfilePic{
+  display: none;
+}
+
+input#myFile{
+  margin-left: 10%
+}

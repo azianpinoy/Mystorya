@@ -2,16 +2,18 @@
 //This section sets up the edit profile functions
 $("#editProfile").on("click", function(){
 	$(".profileText").prop("disabled", false);
+  $("#editProfilePic").css("display", "block");
 });
 
 $("#profileButton").on("click", function(){
 	$(".profileText").prop("disabled", true);
+  $("#editProfilePic").css("display", "none");
 })
 
 //This section will populate profile data
 var userID;
 
-userID = 1;
+userID = localStorage.userID;
 
 
 $( document ).ready(function() {
@@ -23,6 +25,7 @@ function getProfileData(id){
 	$.get("/api/user/id/" + id, function(data) {
       console.log(data);
       
+      var userName = data.userName;
       var firstName = data.firstName;
       var lastName = data.lastName;
       var email = data.email;
@@ -32,6 +35,7 @@ function getProfileData(id){
 
       $("#firstName").val(firstName);
       $("#lastName").val(lastName);
+      $("#userName").val(userName);
       $("#email").val(email);
       $("#bio").val(bio);
       $("#location").val(location);
@@ -75,10 +79,4 @@ function getUserStories(id){
   	})
 }
 
-//This section will handle the opening of a story
-
-$(".bookImage").on("click", function(){
-	console.log("Click worked");
-	var storyID = this.attr("id");
-	localStorage.setItem("storyIDCookie", storyID);
-})
+//This section will handle the edit profile picture button

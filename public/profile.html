@@ -15,21 +15,22 @@
 
 <!-- This section holds the header navbar -->
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div id="headerContainer" class="container-fluid">
 
 
-	<div class="col-sm-3 col-md-3 col-lg-3">
-		<a class="pull-left" href="#"><img src="img/logo.jpg"></a>
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a id="headerLogo" class="pull-left" href="/"><img src="img/logom2.png"></a>
+		<a href='/' class='pull-left'><img src="img/mystolo.png"></a>
 	</div>
 	
-	<div class="col-sm-6 col-md-6 col-lg-6">
-		<div id="searchBox" class="form-group has-feedback">
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<div id="searchBox" class="form-group has-feedback center-block">
 		    <input type="text" class="form-control text-center" placeholder="Search MyStorya"/>
 		    <i class="glyphicon glyphicon-search form-control-feedback"></i>
 		</div>
 	</div>
 	
-	<div class="col-sm-3 col-md-3 col-lg-3"> 
+	<div class="col-sm-4 col-md-4 col-lg-4"> 
 	    <ul class="nav navbar-nav navbar-right">
 	    	<li><a href="#"><span class="glyphicon glyphicon-align-justify"></span></a></li>
 	    </ul>
@@ -44,9 +45,13 @@
 
 		<div class="col-sm-3 col-md-3 col-lg-3">
 			<h3 class="text-center">Your Profile</h3>
-			<img id="profilePic" class="center-block" src="img/logo.jpg">
+			<img id="profilePic" class="center-block" src="img/logom2.png">
+			<div id="editProfilePic">
+				<div class="text-center">Edit Profile Picture: </div> 
+				<input type="file" id="myFile">
+			</div>	
 			<br>
-			<a href="#" id="editProfile" class="text-center">Edit Profile</a>	
+			<a href="#" id="editProfile" class="center-block text-center">Edit Profile</a>	
 		</div> 
 
 		<div class="col-sm-9 col-md-9 col-lg-9">
@@ -68,6 +73,9 @@
 				</div>
 
 			</div>
+			
+			<label>Username</label>
+			<input id="userName" class="profileText form-control" disabled="true" type="text">
 
 			<label>Email</label>
 			<input id="email" class="profileText form-control" disabled="true" type="Email">

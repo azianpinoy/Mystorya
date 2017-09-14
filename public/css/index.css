@@ -332,6 +332,14 @@ span.psw {
 .jumbotron h1{
   margin-top: 200px;
   background: rgba(142, 204, 214, 0.5);
+  color: white;
+  text-shadow:
+    -1px -1px 0 grey,
+    1px -1px 0 grey,
+    -1px 1px 0 grey,
+    1px 1px 0 grey;
+  border-top: solid 1px #d4d4d4; 
+  border-bottom: solid 1px #d4d4d4;
 }
 
 #searchButton{
