@@ -1,3 +1,5 @@
+var storyIndex = 0;
+
 //This section sets up the edit profile functions
 $("#editProfile").on("click", function(){
 	$(".profileText").prop("disabled", false);
@@ -49,34 +51,54 @@ function getUserStories(id){
 
       var storyCount = data.Stories.length;
       var selectorCount = 4;
+      var count = 0;
 
-      for(var i = 0; i < storyCount && i < selectorCount; i++){
+      console.log(storyCount);
+
+      for(var i = storyIndex; i < storyCount && count < selectorCount; i++){
       	var storyID = data.Stories[i].id;
       	var bookImage = data.Stories[i].coverImage;
+        count++;
 
-      	switch(i){
-      		case 0:
-				$("#userStory1").attr("src", bookImage);
-				$("#userStory1").attr("id", storyID);      			
-      			break;
-  			case 1:
-  				$("#userStory2").attr("src", bookImage);
-  				$("#userStory2").attr("id", storyID); 
-  				break;
-  			case 2:
-  				$("#userStory3").attr("src", bookImage);
-  				$("#userStory3").attr("id", storyID); 
-  				break;
-  			case 3:
-  				$("#userStory4").attr("src", bookImage);
-  				$("#userStory4").attr("id", storyID); 
-  				break;
-  			default:
-  				console.log("Something went wrong in the switch/case statements.")
-      	}
+        console.log(storyID);
+        console.log(bookImage);
+
+      	switch(count){
+        	case 1:
+    				$("#userStory1").attr("src", bookImage);
+    				$("#userStory1").attr("id", storyID);      			
+        			break;
+    			case 2:
+    				$("#userStory2").attr("src", bookImage);
+    				$("#userStory2").attr("id", storyID); 
+    				break;
+    			case 3:
+    				$("#userStory3").attr("src", bookImage);
+    				$("#userStory3").attr("id", storyID); 
+    				break;
+    			case 4:
+    				$("#userStory4").attr("src", bookImage);
+    				$("#userStory4").attr("id", storyID); 
+    				break;
+    			default:
+    				console.log("Something went wrong in the switch/case statements.")
+        	}
       }
+
+      console.log("after switch/case");
+
   	})
 }
+
+//This section will handle the left/right scroll functionality
+$(".rightScroll").on("click", function(){
+  console.log("button click worked");
+
+  storyIndex++;
+  console.log(storyIndex);
+  console.log(userID);
+  getUserStories(userID);
+})
 
 //This section will hold the update profile button functionality
 $("#profileButton").on("click", function(){
