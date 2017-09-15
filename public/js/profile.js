@@ -65,8 +65,11 @@ function getUserStories(id){
 
       	switch(count){
         	case 1:
+            console.log("case 1");
     				$("#userStory1").attr("src", bookImage);
-    				$("#userStory1").attr("id", storyID);      			
+    				console.log(bookImage);
+            $("#userStory1").attr("id", storyID);
+            console.log(storyID);      			
         			break;
     			case 2:
     				$("#userStory2").attr("src", bookImage);
