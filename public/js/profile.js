@@ -52,7 +52,7 @@ function getUserStories(id){
 
       for(var i = 0; i < storyCount && i < selectorCount; i++){
       	var storyID = data.Stories[i].id;
-      	var bookImage = data.Stories[i].image;
+      	var bookImage = data.Stories[i].coverImage;
 
       	switch(i){
       		case 0:

@@ -16,7 +16,14 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: 0
     },
-    image: {
+    coverImage: {
+      type: DataTypes.STRING,
+      allowNull: true, 
+      validate:{
+        isUrl: true,
+      }
+    },
+    storyImage: {
       type: DataTypes.STRING,
       allowNull: true, 
       validate:{
