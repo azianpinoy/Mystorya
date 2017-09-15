@@ -91,7 +91,6 @@ function updateProfileData(){
     var email = $("#email").val().trim();
     var bio = $("#bio").val().trim();
     var location = $("#location").val().trim();
-    var profilePic = $("#myFile").val().trim();
     
     var userData = {
       id: userID,
@@ -101,7 +100,6 @@ function updateProfileData(){
       email: email,
       bio: bio,
       location: location,
-      profilePic: profilePic,
     };
   
     $.ajax({

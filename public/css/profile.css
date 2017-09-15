@@ -113,3 +113,15 @@
 input#myFile{
   margin-left: 10%
 }
+
+.leftScroll{
+  position: absolute;
+  left: -30px;
+  margin-top: 30%;
+}
+
+.rightScroll{
+  position: absolute;
+  right: -20px;
+  bottom: 45%;
+}
