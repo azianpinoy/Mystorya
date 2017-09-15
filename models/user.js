@@ -50,7 +50,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     profilePic:{
-      type: DataTypes.STRING,
+      type: DataTypes.BLOB,
       allowNull: true,
       validate: {
         isUrl: true,

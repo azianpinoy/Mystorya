@@ -1,4 +1,5 @@
 var db = require("../models");
+var fs = require("fs");
 
 module.exports = function(app) {
   app.get("/api/user", function(req, res) {
@@ -33,6 +34,18 @@ module.exports = function(app) {
 
   app.post("/api/user", function(req, res) {
     db.User.create(req.body).then(function(result) {
+      res.json(result);
+    });
+  });
+
+  app.put("/api/user", function(req, res) {
+    db.User.update(req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      })
+    .then(function(result) {
       res.json(result);
     });
   });

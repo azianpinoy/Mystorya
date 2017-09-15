@@ -1,4 +1,3 @@
-
 //This section sets up the edit profile functions
 $("#editProfile").on("click", function(){
 	$(".profileText").prop("disabled", false);
@@ -10,7 +9,7 @@ $("#profileButton").on("click", function(){
   $("#editProfilePic").css("display", "none");
 })
 
-//This section will populate profile data
+//This section will populate profile data and user stories on document ready
 var userID;
 
 userID = localStorage.userID;
@@ -78,5 +77,46 @@ function getUserStories(id){
       }
   	})
 }
+
+//This section will hold the update profile button functionality
+$("#profileButton").on("click", function(){
+  updateProfileData();
+})
+
+function updateProfileData(){
+    
+    var firstName = $("#firstName").val().trim();
+    var lastName = $("#lastName").val().trim();
+    var userName = $("#userName").val().trim();
+    var email = $("#email").val().trim();
+    var bio = $("#bio").val().trim();
+    var location = $("#location").val().trim();
+    var profilePic = $("#myFile").val().trim();
+    
+    var userData = {
+      id: userID,
+      firstName: firstName,
+      lastName: lastName,
+      userName : userName,
+      email: email,
+      bio: bio,
+      location: location,
+      profilePic: profilePic,
+    };
+  
+    $.ajax({
+      method: "PUT",
+      url: "/api/user",
+      data: userData,
+    })
+    .done(function() {
+      console.log("User data updated")
+    });
+  
+}
+
+
+
+
 
 //This section will handle the edit profile picture button
