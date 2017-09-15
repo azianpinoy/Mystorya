@@ -1,3 +1,4 @@
+
 var express = require("express");
 var bodyParser = require("body-parser");
 
@@ -15,6 +16,7 @@ app.use(express.static("public"));
 
 require("./routes/api-routes-user.js")(app);
 require("./routes/html-routes.js")(app);
+require("./routes/api-routes-story.js")(app);
 
 db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {

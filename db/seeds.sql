@@ -1,5 +1,5 @@
-INSERT INTO users (firstName, lastName, email, password, bio, location, profilePic, createdAt, updatedAt)
-VALUES ("James", "DeChavez", "abc@abc.com", "passwordyay", "I am James. Hello", "California", "http://lorempixel.com/400/200", now(), now());
+INSERT INTO users (userName, firstName, lastName, email, password, bio, location, profilePic, createdAt, updatedAt)
+VALUES ("J-DAWG", "James", "DeChavez", "abc@abc.com", "passwordyay", "I am James. Hello", "California", "http://lorempixel.com/400/200", now(), now());
 
 INSERT INTO stories (title, body, viewCount, coverImage, storyImage, video, createdAt, updatedAt, userID)
 VALUES ("Test Story", "This is a good story!", 70, "http://lorempixel.com/150/200/nightlife", "http://lorempixel.com/50/50/nightlife", null, now(), now(), 1);
