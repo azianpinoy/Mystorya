@@ -14,6 +14,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static(__dirname + "/public"));
 
 require("./routes/api-routes-user.js")(app);
+require("./routes/api-routes-story.js")(app);
 require("./routes/html-routes.js")(app);
 
 db.sequelize.sync({}).then(function() {
