@@ -47,54 +47,84 @@ function getProfileData(id){
 
 function getUserStories(id){
 	$.get("/api/user/id/" + id, function(data) {
-      console.log(data);
 
       var storyCount = data.Stories.length;
       var selectorCount = 4;
       var count = 0;
 
-      console.log(storyCount);
+      if(storyIndex >= storyCount){
+        storyIndex = 0;
+      }
 
       for(var i = storyIndex; i < storyCount && count < selectorCount; i++){
       	var storyID = data.Stories[i].id;
       	var bookImage = data.Stories[i].coverImage;
         count++;
 
-        console.log(storyID);
-        console.log(bookImage);
-
       	switch(count){
         	case 1:
-            console.log("case 1");
     				$("#userStory1").attr("src", bookImage);
-    				console.log(bookImage);
-            $("#userStory1").attr("id", storyID);
-            console.log(storyID);      			
-        			break;
+            $("#userStory1").attr("storyID", storyID);     			
+        		break;
     			case 2:
     				$("#userStory2").attr("src", bookImage);
-    				$("#userStory2").attr("id", storyID); 
+    				$("#userStory2").attr("storyID", storyID); 
     				break;
     			case 3:
     				$("#userStory3").attr("src", bookImage);
-    				$("#userStory3").attr("id", storyID); 
+    				$("#userStory3").attr("storyID", storyID); 
     				break;
     			case 4:
     				$("#userStory4").attr("src", bookImage);
-    				$("#userStory4").attr("id", storyID); 
+    				$("#userStory4").attr("storyID", storyID); 
     				break;
     			default:
     				console.log("Something went wrong in the switch/case statements.")
         	}
       }
 
-      console.log("after switch/case");
+      var remainingSelectors = selectorCount - count;
+
+      if(count == 4){
+        return;
+      }
+      
+      for(var j = 0; j < remainingSelectors; j++){
+        var storyID = data.Stories[j].id;
+        var bookImage = data.Stories[j].coverImage;
+        count++;
+        
+        switch(count){
+        case 1:
+          $("#userStory1").attr("src", bookImage);
+          $("#userStory1").attr("storyID", storyID);   
+          break;
+        case 2:
+          $("#userStory2").attr("src", bookImage);
+          $("#userStory2").attr("storyID", storyID);
+          break;
+        case 3:
+          $("#userStory3").attr("src", bookImage);
+          $("#userStory3").attr("storyID", storyID);
+          break;
+        case 4:
+          $("#userStory4").attr("src", bookImage);
+          $("#userStory4").attr("storyID", storyID);
+          break;
+        default:
+          console.log("Something went wrong in the switch/case statements.")
+        }
+
+      }
+      
 
   	})
 }
 
 //This section will handle the left/right scroll functionality
 $(".rightScroll").on("click", function(){
+  event.preventDefault();
+
   console.log("button click worked");
 
   storyIndex++;
