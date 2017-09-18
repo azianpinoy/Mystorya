@@ -9,24 +9,23 @@ var nightmare = Nightmare({
 // STORY: As a developer nerd, I want to be able to take courses on web tech.
 nightmare
   // Visit login page
-  .goto("https://www.mystorya.herokuapp.com")
+  .goto("https://mystorya.herokuapp.com/")
+  //take a screen shot and save it to current directory.
+  .screenshot("homePage.png")
   //click login
-  .click("#login-button")
+  .click("#startLogin")
   // Enter username.
-  .type("#firstName", "James")
-    // Enter username.
-  .type("#lastName", "Dechavez")
-  // Enter password.
-  .type("#password", "password123")
+  .type("#userName", "J-DAWG")
+  //enter password
+  .type("#password", "passwordyay")
   // Take a screenshot of the login form.
   .screenshot("login.png")
-  // Click login button. Always check if you've done this where necessary!
-  // It's easy to forget.
-  .click("#submit-button")
-  // Wait until the  link to the course catalog renders.
+  // Click login button.
+  .click("#loginButton")
+  // Wait until profile renders.
   .wait("a[href='/profile']")
   // Scroll down a few hundred pixels.
-  .scrollTo(500, 0)
+  .scrollTo(550, 0)
   // Take a screenshot and save it to the current directory.
   .screenshot("profile.png")
   // End test

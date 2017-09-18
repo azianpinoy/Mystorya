@@ -62,7 +62,7 @@
 }
 
 .bookImage{
-  height: 200px;
+  height: 275px;
 }
 
 .overlay {
@@ -92,6 +92,10 @@
   -ms-transform: translate(-50%, -50%);
 }
 
+.navbar-default{
+
+  background-color: white;
+}
 .navigation
 {
   
@@ -325,21 +329,7 @@ span.psw {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0px;
-}
-
-
-
-.jumbotron h1{
-  margin-top: 200px;
-  background: rgba(142, 204, 214, 0.5);
-  color: white;
-  text-shadow:
-    -1px -1px 0 grey,
-    1px -1px 0 grey,
-    -1px 1px 0 grey,
-    1px 1px 0 grey;
-  border-top: solid 1px #d4d4d4; 
-  border-bottom: solid 1px #d4d4d4;
+  border-bottom: solid 1px BLACK;
 }
 
 #searchButton{
@@ -361,7 +351,7 @@ span.psw {
 /* This section holds the grey contents styling */
 .contents{
   margin-bottom: 75px;
-  height:800px;
+  height:450px;
   background-image: url("../img/greyBackground.jpg");
   background-size: contain;
   margin: auto;
@@ -430,7 +420,8 @@ span.psw {
 
 .container .company-info{
   font-size: 13px;
-  font-family: "didot";
+  font-family: "georgia";
+  color:black;
   margin-top: 20px;
   margin-left: 30px;
 }
@@ -445,9 +436,13 @@ padding-top: 10px;
 }
 
 .shelfTitle{
-  background-color: lightblue;
-  width: 10%;
-  border: solid lightgrey 1px;
+ 
+ font-family: "didot";
+  color:white;
+  height: 30px;
+  font-family: "georgia";
+  color:black;
+  border: solid #grey 1px;
   margin-top: 0px;
 }
 
@@ -460,7 +455,7 @@ padding-top: 10px;
 }
 
 .shelf {
-    background-image: url("../img/glassyshelf.png");
+    background-image: url("../img/wdshelf.png");
     background-repeat: no-repeat;
     background-position: bottom;   
 }
@@ -473,7 +468,7 @@ padding-top: 10px;
 
 
 #shelfBackground{
-  background-color: #f6fdff;
+  background-color:rgb(240, 240, 240);
   padding-top: 30px;
   padding-bottom: 30px;
 }
