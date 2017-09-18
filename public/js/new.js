@@ -1,4 +1,5 @@
-var userID = 1;
+var userID = localStorage.userID;
+localStorage.clear();
 //This section will make the update story button function
 $("#newStory").on("click", function(){  
     console.log("onclick successful");

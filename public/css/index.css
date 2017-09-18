@@ -19,6 +19,7 @@
   -moz-perspective: 100px;
   -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+  margin-bottom: 20px;
 }
 
 .csstransforms3d  .book {
@@ -63,6 +64,8 @@
 
 .bookImage{
   height: 200px;
+  width: 140px;
+  border: solid 1px black;
 }
 
 .overlay {
@@ -76,6 +79,7 @@
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
+  z-index: 99;
 }
 
 .book:hover .overlay {
@@ -432,10 +436,10 @@ padding-top: 10px;
 }
 
 .shelfTitle{
-  background-color: lightblue;
-  width: 10%;
-  border: solid lightgrey 1px;
-  margin-top: 0px;
+  font-family: "didot";
+  color:black;
+  height: 30px;
+  margin-top: 10px;
 }
 
 #modalContainer{
@@ -446,7 +450,8 @@ padding-top: 10px;
 .shelf {
     background-image: url("../img/wdshelf.png");
     background-repeat: no-repeat;
-    background-position: bottom;   
+    background-position: bottom;  
+    margin-bottom: 20px;
 }
 
 #nameDiv{
@@ -457,9 +462,7 @@ padding-top: 10px;
 
 
 #shelfBackground{
-  background-color: #f6fdff;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  background-color: rgb(240, 240, 240);
 }
 
 #headerContainer{
@@ -481,4 +484,41 @@ padding-top: 10px;
 .form-control-feedback {
     margin-top: 27px;
     margin-right: 10px;
+}
+
+.leftScroll{
+  position: absolute;
+  left: -30px;
+  margin-top: 30%;
+  width: 40px;
+}
+
+.rightScroll{
+  position: absolute;
+  right: -20px;
+  bottom: 45%;
+  width: 40px;
+}
+
+body{
+  background-color: rgb(240, 240, 240);
+}
+
+.coverText{
+  position: absolute;
+  top: 10%;
+  left:10px;
+  right:10px;
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.coverText h4, .coverText h5{
+  background-color: rgba(5, 5, 5, 0.3);
+  padding: 3px;
+  border: solid 1px rgba(165, 165, 165, 0.34)
 }

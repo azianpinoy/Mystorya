@@ -8,6 +8,7 @@
 </head>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/profile.css">
 
 <body>
@@ -97,7 +98,7 @@
 </div>
 
 <!-- This section holds followers/favorites/stories counters -->
-<div class="navbar navbar-default">
+<div id="countersDiv" class="navbar navbar-default">
 	<div class="container">
 		
 		<div class="col-sm-4 col-md-4 col-lg-4">
@@ -118,214 +119,294 @@
 	</div>
 </div>
 
+<div id="shelfBackground">
+
 <!-- This is the Create New Story Button -->
-<a href="/new"><button type="submit" class ="btn-primary btn center-block">Create New Story <span class="glyphicon glyphicon-plus"> </span></button></a>
+<button id="newStoryButton" type="submit" class ="btn-primary btn center-block">
+	<img src="img/newStorybt.png">
+</button>
 
 
 <!-- This section holds the User's Stories Book Shelf -->
-<h3>Your Stories</h3>
-<div id="userStories" class="row">
+<h3 class="shelfTitle text-center">YOUR.STORYA</h3>
+<div id="userStories" class="row shelf">
 	<div class="container">
 		<div id="userOne" class="col-sm-3 col-md-3 col-lg-3 text-center">
 			<button class="btn btn-info leftScroll"><span class="glyphicon glyphicon-chevron-left pull-left"></span></button>
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
+			<div class="books">
+		  		<div class="book">
+		  			<a href="/read">
 			    		<img id="userStory1" class="bookImage" src="img/book.jpg" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-					  	<div id="userCover1" class="coverText text-center center-block">
-					  		<h4 id="userTitle1">Book Title</h4>
-					  		<br><br><br>
-					  		<h5 id="userAuthor1">By Some Author</h5>
-					  	</div>
-			  		</div>
-				</div>
-			</a>
+					</a>
+				  	<div id="userCover1" class="coverText text-center center-block">
+				  		<h4 id="userTitle1">Book Title</h4>
+				  		<br><br><br>
+				  		<h5 id="userAuthor1">By Some Author</h5>
+				  	</div>
+		  		</div>
+			</div>
 		</div>
 		<div id="userTwo" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
+			<div class="books">
+		  		<div class="book">
+		  			<a href="/read">
 			    		<img id="userStory2" class="bookImage" src="img/book.jpg" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-					  	<div id="userCover2" class="coverText text-center center-block">
-					  		<h4 id="userTitle2">Book Title</h4>
-					  		<br><br><br>
-					  		<h5 id="userAuthor2">By Some Author</h5>
-					  	</div>
-			  		</div>
-				</div>
-			</a>
+					</a>
+				  	<div id="userCover2" class="coverText text-center center-block">
+				  		<h4 id="userTitle2">Book Title</h4>
+				  		<br><br><br>
+				  		<h5 id="userAuthor2">By Some Author</h5>
+				  	</div>
+		  		</div>
+			</div>
 		</div>
 		<div id="userThree" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
+			<div class="books">
+		  		<div class="book">
+		  			<a href="/read">
 			    		<img id="userStory3" class="bookImage" src="img/book.jpg" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-					  	<div id="userCover3" class="coverText text-center center-block">
-					  		<h4 id="userTitle3">Book Title</h4>
-					  		<br><br><br>
-					  		<h5 id="userAuthor3">By Some Author</h5>
-					  	</div>
-			  		</div>
-				</div>
-			</a>
+					</a>
+				  	<div id="userCover3" class="coverText text-center center-block">
+				  		<h4 id="userTitle3">Book Title</h4>
+				  		<br><br><br>
+				  		<h5 id="userAuthor3">By Some Author</h5>
+				  	</div>
+		  		</div>
+			</div>
 		</div>
 		<div id="userFour" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
+			<div class="books">
+		  		<div class="book">
+		  			<a href="/read">
 			    		<img id="userStory4" class="bookImage" src="img/book.jpg" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-					  	<div id="userCover4" class="coverText text-center center-block">
-					  		<h4 id="userTitle4">Book Title</h4>
-					  		<br><br><br>
-					  		<h5 id="userAuthor4">By Some Author</h5>
-					  	</div>
-			  		</div>
-				</div>
-			</a>
+					</a>
+				  	<div id="userCover4" class="coverText text-center center-block">
+				  		<h4 id="userTitle4">Book Title</h4>
+				  		<br><br><br>
+				  		<h5 id="userAuthor4">By Some Author</h5>
+				  	</div>
+		  		</div>
+			</div>
 			<button class="btn btn-info rightScroll"><span class="glyphicon glyphicon-chevron-right pull-right"></span>
 		</div>
 	</div>
 </div>
 
 
-<br>
-<br>
-
 <!-- This section holds the Latest Stories Book Shelf -->
-<h3>Lastest</h3>
-<div id="latestStories" class="row">
-	<div class="container">
+<h3 class="shelfTitle text-center">NEW.STORYA</h3>
+<div id="latestStories" class="row shelf">
+	<div class="container" style="padding-bottom: 17px;">
 		<div id="latestOne" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<button class="btn btn-info leftScroll"><span class="glyphicon glyphicon-chevron-left pull-left"></span></button>
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
-			    		<img class="bookImage" src="img/book.jpg" />
-			    		<div class="overlay">
-					    	<div class="text">Open Story</div>
-					  	</div>
-			  		</div>
-				</div>
-			</a>
+			<button id="newLeftScroll" class="btn btn-info leftScroll"><span class="glyphicon glyphicon-chevron-left pull-left"></span></button>
+            <div class="books">
+		  		<div class="book">
+		     		<a href="/read">
+                        <img id="newImage1" class="bookImage" src="img/newstory1.png" storyID="7" />
+                        <div class="overlay">
+				    	   <div class="text">Open Story</div>
+				  	    </div>
+                    </a>
+                    <div id="newCover1" class="coverText text-center center-block">
+                        <h4 id="newTitle1">Book Title</h4>
+                        <br><br><br>
+                        <h5 id="newAuthor1">By Some Author</h5>
+                    </div>
+		  		</div>
+			</div>
 		</div>
 		<div id="latestTwo" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
-			    		<img class="bookImage" src="img/book.jpg" />
+			<div class="books">
+		  		<div class="book">
+                    <a href="/read">
+			    		<img id="newImage2" class="bookImage" src="img/newstory2.png"  storyID="8" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-			  		</div>
-				</div>
-			</a>
+                    </a>
+                    <div id="newCover2" class="coverText text-center center-block">
+                        <h4 id="newTitle2">Book Title</h4>
+                        <br><br><br>
+                        <h5 id="newAuthor2">By Some Author</h5>
+                    </div>
+		  		</div>
+			</div>
 		</div>
 		<div id="latestThree" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
-			    		<img class="bookImage" src="img/book.jpg" />
-			    		<div class="overlay">
-					    	<div class="text">Open Story</div>
-					  	</div>
-			  		</div>
-				</div>
-			</a>
+			<div class="books">
+		  		<div class="book">
+                    <a href="/read">
+		    		   <img id="newImage3" class="bookImage" src="img/book.jpg"  storyID="9" />
+		    		   <div class="overlay">
+				    	  <div class="text">Open Story</div>
+				  	    </div>
+                    </a>
+                    <div id="newCover3" class="coverText text-center center-block">
+                        <h4 id="newTitle3">Book Title</h4>
+                        <br><br><br>
+                        <h5 id="newAuthor3">By Some Author</h5>
+                    </div>
+		  		</div>
+			</div>			
 		</div>
 		<div id="latestFour" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
-			    		<img class="bookImage" src="img/book.jpg" />
+			<div class="books">
+		  		<div class="book">
+                    <a href="/read">
+			    		<img id="newImage4" class="bookImage" src="img/book.jpg"  storyID="10" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-			  		</div>
-				</div>
-			</a>
-			<button class="btn btn-info rightScroll"><span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                    </a>
+                    <div id="newCover4" class="coverText text-center center-block">
+                        <h4 id="newTitle4">Book Title</h4>
+                        <br><br><br>
+                        <h5 id="newAuthor4">By Some Author</h5>
+                    </div>
+		  		</div>
+			</div>
+			<button id="newRightScroll" class="btn btn-info rightScroll"><span class="glyphicon glyphicon-chevron-right pull-right"></span>
 		</div>
 	</div>
 </div>
 
-<br>
-<br>
-
-<!-- This section holds the Latest Stories Book Shelf -->
-<h3>Popular</h3>
-<div id="popularStories" class="row">
-	<div class="container">
+<!-- This section holds the Popular Stories Book Shelf -->
+<h3 class="shelfTitle text-center">POPULAR.STORYA</h3>
+<div id="popularStories" class="row shelf">
+	<div class="container" style="padding-bottom: 17px;">
 		<div id="popularOne" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<button class="btn btn-info leftScroll"><span class="glyphicon glyphicon-chevron-left pull-left"></span></button>
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
-			    		<img class="bookImage" src="img/book.jpg" />
+			<button id="popLeftScroll" class="btn btn-info leftScroll"><span class="glyphicon glyphicon-chevron-left pull-left"></span></button>
+			<div class="books">
+		  		<div class="book">
+                    <a href="/read">
+			    		<img id="popularImage1" class="bookImage" src="img/popstory1.jpg" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-			  		</div>
-				</div>
-			</a>
+                    </a>
+                    <div id="popularCover1" class="coverText text-center center-block">
+                        <h4 id="popularTitle1">Book Title</h4>
+                        <br><br><br>
+                        <h5 id="popularAuthor1">By Some Author</h5>
+                    </div>
+		  		</div>
+			</div>
 		</div>
 		<div id="popularTwo" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
-			    		<img class="bookImage" src="img/book.jpg" />
+			<div class="books">
+		  		<div class="book">
+                    <a href="/read">
+			    		<img id="popularImage2" class="bookImage" src="img/popstory2.jpg" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-			  		</div>
-				</div>
-			</a>
+                    </a>
+                    <div id="popularCover2" class="coverText text-center center-block">
+                        <h4 id="popularTitle2">Book Title</h4>
+                        <br><br><br>
+                        <h5 id="popularAuthor2">By Some Author</h5>
+                    </div>
+		  		</div>
+			</div>
 		</div>
 		<div id="popularThree" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
-			    		<img class="bookImage" src="img/book.jpg" />
+			<div class="books">
+		  		<div class="book">
+                    <a href="/read">
+			    		<img id="popularImage3" class="bookImage" src="img/popstory3.jpg" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-			  		</div>
-				</div>
-			</a>
+                    </a>
+                    <div id="popularCover3" class="coverText text-center center-block">
+                        <h4 id="popularTitle3">Book Title</h4>
+                        <br><br><br>
+                        <h5 id="popularAuthor3">By Some Author</h5>
+                    </div>
+		  		</div>
+			</div>
 		</div>
 		<div id="popularFour" class="col-sm-3 col-md-3 col-lg-3 text-center">
-			<a href="/read">
-				<div class="books">
-			  		<div class="book">
-			    		<img class="bookImage" src="img/book.jpg" />
+			<div class="books">
+		  		<div class="book">
+                    <a href="/read">
+			    		<img id="popularImage4" class="bookImage" src="img/popstory4.jpg" />
 			    		<div class="overlay">
 					    	<div class="text">Open Story</div>
 					  	</div>
-			  		</div>
-				</div>
-			</a>
-			<button class="btn btn-info rightScroll"><span class="glyphicon glyphicon-chevron-right pull-right"></div></span>
-	</div>
+                    </a>
+                    <div id="popularCover4" class="coverText text-center center-block">
+                        <h4 id="popularTitle4">Book Title</h4>
+                        <br><br><br>
+                        <h5 id="popularAuthor4">By Some Author</h5>
+                    </div>
+		  		</div>
+			</div>
+			<button id="popRightScroll" class="btn btn-info rightScroll"><span class="glyphicon glyphicon-chevron-right pull-right"></span></button>
+    	</div>
+    </div>
+
 </div>
 
 <br>
 <br>
 
 <footer class="footer">
-  <div class="container-fluid">
-  	<p class="text-center">Copyright MyStorya © 2017</p>
-  </div>
+    <div class="container">
+        <div class = "row">
+            <div class = "col-xs-1 footer-logo">
+                <a href='/' class='pull-left'><img src="img/logoM2.png"></a>
+            </div>
+            <div class = "col-xs-3 col-xs-offset-1  company-info">
+                <div class = "row">
+                    <div class = "col-xs-12 company-info-title">
+                        <h4>MyStorya Inc.</h4>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-12">
+                        Palo Alto, Ca
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-12">
+                        hello@mystorya.com
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-12">
+                        www.mystorya.com
+                    </div>
+                </div>
+            </div>
+            <div class = "col-xs-2 ">
+                <p class="text-muted">@Copyright 2017 MyStorya Inc.</p>
+            </div>
+            <div class = "col-xs-5  social-icons ">
+                <div class = "col-xs-1 col-xs-offset-9">
+                    <i class="fa fa-github fa-2x"></i>
+                </div>
+                <div class = "col-xs-1 ">
+                    <i class="fa fa-linkedin-square fa-2x "></i>
+                </div>
+                <div class = "col-xs-1 ">
+                    <i class="fa fa-stack-overflow fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 

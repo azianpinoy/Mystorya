@@ -5,7 +5,8 @@ $("#flipbook").turn({
     autoCenter: true
 });
 
-var storyID = 1;
+var storyID = localStorage.storyID;
+localStorage.clear();
 
 $( document ).ready(function() {
 	getStoryData(storyID);
