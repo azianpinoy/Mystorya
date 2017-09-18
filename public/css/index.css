@@ -63,9 +63,9 @@
 }
 
 .bookImage{
-  height: 200px;
-  width: 140px;
-  border: solid 1px black;
+  height: 220px;
+  /* width: 140px;
+  border: solid 1px black; */
 }
 
 .overlay {
