@@ -76,6 +76,7 @@
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
+  z-index: 99;
 }
 
 .book:hover .overlay {
@@ -124,4 +125,17 @@ input#myFile{
   position: absolute;
   right: -20px;
   bottom: 45%;
+}
+
+.coverText{
+  position: absolute;
+  top: 10%;
+  left:10px;
+  right:10px;
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }

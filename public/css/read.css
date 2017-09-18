@@ -11,18 +11,14 @@
 	border: solid black 1px;
 }
 
-body{
-    overflow:hidden;
-}
-
 #flipbook{
-    width:800px;
-    height:450px;
+    width:900px;
+    height:500px;
 }
 
 #flipbook .page{
-    width:800px;
-    height:450px;
+    width:900px;
+    height:500px;
     background-color:white;
     font-size:10px;
     text-align:center;
@@ -85,4 +81,27 @@ body{
 .page{
 	border: solid black 1px;
 	padding: 10px;
+}
+
+#storyBodyLeft{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.coverText{
+  position: absolute;
+  top: 10%;
+  left:10px;
+  right:10px;
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+#storyImage{
+    width: 90%;
+    height: 40%;
 }

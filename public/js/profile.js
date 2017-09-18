@@ -59,25 +59,37 @@ function getUserStories(id){
       for(var i = storyIndex; i < storyCount && count < selectorCount; i++){
       	var storyID = data.Stories[i].id;
       	var bookImage = data.Stories[i].coverImage;
+        var storyTitle = data.Stories[i].title;
+        var firstName = data.firstName;
+        var lastName = data.lastName;
+        var author = firstName + " " + lastName;
         count++;
 
       	switch(count){
         	case 1:
     				$("#userStory1").attr("src", bookImage);
-            $("#userStory1").attr("storyID", storyID);     			
+            $("#userStory1").attr("storyID", storyID);
+            $("#userTitle1").html(storyTitle);
+            $("#userAuthor1").html("By " + author);     			
         		break;
     			case 2:
     				$("#userStory2").attr("src", bookImage);
     				$("#userStory2").attr("storyID", storyID); 
-    				break;
+    				$("#userTitle2").html(storyTitle);
+            $("#userAuthor2").html("By " + author);
+            break;
     			case 3:
     				$("#userStory3").attr("src", bookImage);
     				$("#userStory3").attr("storyID", storyID); 
-    				break;
+    				$("#userTitle3").html(storyTitle);
+            $("#userAuthor3").html("By " + author);
+            break;
     			case 4:
     				$("#userStory4").attr("src", bookImage);
     				$("#userStory4").attr("storyID", storyID); 
-    				break;
+    				$("#userTitle4").html(storyTitle);
+            $("#userAuthor4").html("By " + author);
+            break;
     			default:
     				console.log("Something went wrong in the switch/case statements.")
         	}
@@ -92,24 +104,36 @@ function getUserStories(id){
       for(var j = 0; j < remainingSelectors; j++){
         var storyID = data.Stories[j].id;
         var bookImage = data.Stories[j].coverImage;
+        var storyTitle = data.Stories[j].title;
+        var firstName = data.firstName;
+        var lastName = data.lastName;
+        var author = firstName + " " + lastName;
         count++;
         
         switch(count){
         case 1:
           $("#userStory1").attr("src", bookImage);
-          $("#userStory1").attr("storyID", storyID);   
+          $("#userStory1").attr("storyID", storyID);
+          $("#userTitle1").html(storyTitle);
+          $("#userAuthor1").html("By " + author);    
           break;
         case 2:
           $("#userStory2").attr("src", bookImage);
           $("#userStory2").attr("storyID", storyID);
+          $("#userTitle2").html(storyTitle);
+          $("#userAuthor2").html("By " + author); 
           break;
         case 3:
           $("#userStory3").attr("src", bookImage);
           $("#userStory3").attr("storyID", storyID);
+          $("#userTitle3").html(storyTitle);
+          $("#userAuthor3").html("By " + author); 
           break;
         case 4:
           $("#userStory4").attr("src", bookImage);
           $("#userStory4").attr("storyID", storyID);
+          $("#userTitle4").html(storyTitle);
+          $("#userAuthor4").html("By " + author); 
           break;
         default:
           console.log("Something went wrong in the switch/case statements.")

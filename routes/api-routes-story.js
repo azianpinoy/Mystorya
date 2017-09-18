@@ -2,31 +2,20 @@ var db = require("../models");
 var fs = require("fs");
 
 module.exports = function(app) {
-  app.get("/api/user", function(req, res) {
-    db.User.findAll({
-      include: [db.Story]
+  app.get("/api/story", function(req, res) {
+    db.Story.findAll({
+      include: [db.User]
     }).then(function(result) {
       res.json(result);
     });
   });
 
-  app.get("/api/user/id/:id", function(req, res) {
-    db.User.findOne({
+  app.get("/api/story/id/:id", function(req, res) {
+    db.Story.findAll({
       where: {
         id: req.params.id
       },
-      include: [db.Story]
-    }).then(function(result) {
-      res.json(result);
-    });
-  });
-
-  app.get("/api/user/storyID/:storyID", function(req, res) {
-    db.User.findOne({
-      where: {
-        userName: req.params.storyID,
-      },
-      include: [db.Story]
+      include: [db.User]
     }).then(function(result) {
       res.json(result);
     });
